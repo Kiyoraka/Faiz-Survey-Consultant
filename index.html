@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faiz Survey Consultant - Perkhidmatan Ukur Tanah Profesional</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Faiz Survey Consultant - Perkhidmatan Ukur Tanah Profesional Terengganu</title>
+    <meta name="description" content="Jurukur Tanah Berlesen di Terengganu. Perkhidmatan pecah sempadan, ukur topografi, dan urusan hakmilik tanah profesional oleh Sr. Wan Mohd Faiz.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* ===== RESET & BASE STYLES ===== */
+        /* ===== PREMIUM FORMAL DESIGN SYSTEM ===== */
+        :root {
+            /* Professional Color Palette */
+            --primary-navy: #1a365d;
+            --primary-blue: #2563eb;
+            --accent-gold: #f59e0b;
+            --neutral-50: #f8fafc;
+            --neutral-100: #f1f5f9;
+            --neutral-200: #e2e8f0;
+            --neutral-600: #475569;
+            --neutral-800: #1e293b;
+            --neutral-900: #0f172a;
+            
+            /* Premium Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --gradient-subtle: linear-gradient(135deg, var(--neutral-50) 0%, #ffffff 100%);
+            
+            /* Glass Morphism */
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            
+            /* Professional Spacing */
+            --section-padding: 120px;
+            --container-padding: 50px;
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -19,149 +50,140 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            overflow-x: hidden;
-            background: #fafbfc;
+            color: var(--neutral-800);
+            background: var(--neutral-50);
             font-weight: 400;
             letter-spacing: -0.01em;
         }
 
-        /* ===== PREMIUM DESIGN VARIABLES ===== */
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            --glass-bg: rgba(255, 255, 255, 0.25);
-            --glass-border: rgba(255, 255, 255, 0.18);
-            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
-            --shadow-medium: 0 15px 35px rgba(31, 38, 135, 0.2);
-            --shadow-heavy: 0 25px 50px rgba(31, 38, 135, 0.15);
-            --text-primary: #1a1a1a;
-            --text-secondary: #6b7280;
-            --border-radius: 20px;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* ===== PREMIUM DESKTOP STYLES ===== */
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 var(--container-padding);
         }
 
-        /* Premium Header & Navigation */
-        header {
+        /* ===== PREMIUM HEADER ===== */
+        .header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--text-primary);
+            border-bottom: 1px solid var(--neutral-200);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
 
-        .header-scrolled {
+        .header.scrolled {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(25px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
         }
 
-        nav {
+        .nav {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             padding: 2rem 0;
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--text-primary);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--neutral-900);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
             transition: var(--transition);
         }
 
-        .logo i {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 2.2rem;
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
         }
 
         .logo:hover {
             transform: translateY(-2px);
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
             list-style: none;
             gap: 3rem;
         }
 
-        .nav-links a {
-            color: var(--text-primary);
+        .nav-link {
+            color: var(--neutral-600);
             text-decoration: none;
-            transition: var(--transition);
             font-weight: 500;
             font-size: 1rem;
-            letter-spacing: -0.02em;
+            padding: 0.75rem 0;
             position: relative;
-            padding: 0.5rem 0;
+            transition: var(--transition);
         }
 
-        .nav-links a::after {
+        .nav-link::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-gradient);
+            background: var(--gradient-primary);
             transition: var(--transition);
         }
 
-        .nav-links a:hover::after {
+        .nav-link:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
 
-        .nav-links a:hover {
-            color: #667eea;
-            transform: translateY(-2px);
-        }
-
-        .mobile-menu-btn {
+        .mobile-toggle {
             display: none;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            color: var(--text-primary);
+            background: none;
+            border: none;
+            color: var(--neutral-800);
             font-size: 1.5rem;
             cursor: pointer;
             padding: 12px;
-            border-radius: 12px;
+            border-radius: 8px;
             transition: var(--transition);
         }
 
-        .mobile-menu-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(1.05);
+        .mobile-toggle:hover {
+            background: var(--neutral-100);
         }
 
-        /* Premium Hero Section */
+        /* ===== PAGE SECTIONS ===== */
+        .page-section {
+            display: none;
+            min-height: 100vh;
+            padding-top: 120px;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* ===== HERO SECTION ===== */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--gradient-primary);
             color: white;
-            padding: 200px 0 120px;
+            padding: var(--section-padding) 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -177,137 +199,145 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="grain" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0.05)"/></radialGradient></defs><rect width="100" height="20" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            margin-bottom: 2rem;
+            font-size: 4rem;
             font-weight: 700;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
             line-height: 1.2;
             letter-spacing: -0.02em;
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
+        .hero-subtitle {
+            font-size: 1.4rem;
             font-weight: 300;
-            line-height: 1.6;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 3rem;
         }
 
-        .cta-button {
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: white;
+            padding: 18px 36px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
             color: white;
-            padding: 20px 40px;
-            text-decoration: none;
+            padding: 18px 36px;
             border-radius: var(--border-radius);
+            text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
             transition: var(--transition);
-            box-shadow: var(--shadow-medium);
-            letter-spacing: -0.01em;
         }
 
-        .cta-button:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: var(--shadow-heavy);
-            border-color: rgba(255, 255, 255, 0.3);
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.4);
         }
 
-        /* Premium Services Section */
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SERVICES SECTION ===== */
         .services {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-            position: relative;
+            padding: var(--section-padding) 0;
+            background: white;
         }
 
-        .services::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
         }
 
         .section-title {
-            text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 4rem;
-            color: var(--text-primary);
+            font-size: 3rem;
             font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
-            position: relative;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary-gradient);
-            border-radius: 2px;
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--neutral-600);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
-            margin-top: 5rem;
         }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 3rem 2.5rem;
+            background: white;
+            border: 1px solid var(--neutral-200);
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow-light);
-            transition: var(--transition);
+            padding: 3rem 2.5rem;
             text-align: center;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
@@ -319,28 +349,32 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--primary-gradient);
+            background: var(--gradient-primary);
             transform: scaleX(0);
             transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-blue);
         }
 
         .service-card:hover::before {
             transform: scaleX(1);
         }
 
-        .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-heavy);
-            background: rgba(255, 255, 255, 0.9);
-        }
-
         .service-icon {
-            font-size: 3.5rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 2rem;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 2rem;
             transition: var(--transition);
         }
 
@@ -350,414 +384,267 @@
 
         .service-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
+            font-size: 1.5rem;
             font-weight: 600;
-            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: var(--neutral-900);
         }
 
         .service-card p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
+            color: var(--neutral-600);
             line-height: 1.7;
-            font-weight: 400;
         }
 
-        /* Premium Cost Section */
+        /* ===== COST SECTION ===== */
         .cost-section {
-            padding: 120px 0;
-            background: var(--primary-gradient);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cost-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="premium-grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23premium-grid)"/></svg>');
+            padding: var(--section-padding) 0;
+            background: var(--gradient-subtle);
         }
 
         .cost-content {
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cost-section .section-title {
-            color: white;
-            margin-bottom: 3rem;
-        }
-
-        .cost-section .section-title::after {
-            background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
         }
 
         .cost-highlight {
-            background: var(--glass-bg);
-            backdrop-filter: blur(25px);
-            border: 1px solid var(--glass-border);
-            padding: 3rem;
+            background: white;
+            border: 1px solid var(--neutral-200);
             border-radius: var(--border-radius);
+            padding: 3rem;
             margin: 3rem 0;
-            box-shadow: var(--shadow-medium);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
         }
 
         .cost-highlight:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-heavy);
-            background: rgba(255, 255, 255, 0.35);
-        }
-
-        .cost-highlight h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .cost-highlight h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .price-tag {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             font-weight: 800;
-            color: #ffd700;
-            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin: 1rem 0;
-            letter-spacing: -0.02em;
         }
 
-        .cost-section p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        /* Premium About Section */
+        /* ===== ABOUT SECTION ===== */
         .about {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
-            position: relative;
+            padding: var(--section-padding) 0;
+            background: white;
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            grid-template-columns: 400px 1fr;
+            gap: 5rem;
             align-items: center;
         }
 
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            font-weight: 400;
-        }
-
-        .about-text p {
-            margin-bottom: 2rem;
-        }
-
-        .about-text strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
         .about-image {
-            background: var(--primary-gradient);
+            background: var(--gradient-primary);
             border-radius: var(--border-radius);
             height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 5rem;
+            font-size: 6rem;
             position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-medium);
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--neutral-900);
+        }
+
+        .professional-title {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .about-text p {
+            color: var(--neutral-600);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== VIDEOS SECTION ===== */
+        .videos {
+            padding: var(--section-padding) 0;
+            background: var(--gradient-subtle);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
         }
 
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="about-pattern" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.2)"/><stop offset="100%" stop-color="rgba(255,255,255,0.05)"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23about-pattern)"/><circle cx="80" cy="80" r="2" fill="url(%23about-pattern)"/><circle cx="20" cy="80" r="2" fill="url(%23about-pattern)"/><circle cx="80" cy="20" r="2" fill="url(%23about-pattern)"/></svg>');
-            opacity: 0.3;
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .about-image:hover {
-            transform: scale(1.02);
-            box-shadow: var(--shadow-heavy);
+        .video-thumbnail {
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        .about-image i {
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        .video-thumbnail:hover {
+            background: var(--gradient-gold);
         }
 
-        /* Premium Contact Section */
+        .video-content {
+            padding: 2rem;
+        }
+
+        .video-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--neutral-900);
+        }
+
+        /* ===== CONTACT SECTION ===== */
         .contact {
-            padding: 120px 0;
-            background: var(--dark-gradient);
+            padding: var(--section-padding) 0;
+            background: var(--neutral-900);
             color: white;
-            position: relative;
-            overflow: hidden;
         }
 
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23contact-dots)"/></svg>');
-        }
-
-        .contact .section-title {
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-
-        .contact .section-title::after {
-            background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
-        }
-
-        .contact-info {
+        .contact-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            text-align: center;
-            position: relative;
-            z-index: 2;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
 
         .contact-item {
-            padding: 3rem 2rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(25px);
-            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: var(--transition);
-            box-shadow: var(--shadow-light);
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.35);
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-heavy);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
         }
 
         .contact-icon {
-            font-size: 3rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+        }
+
+        .form-group {
             margin-bottom: 2rem;
-            color: #64b5f6;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
             transition: var(--transition);
         }
 
-        .contact-item:hover .contact-icon {
-            transform: scale(1.1);
-            color: #90caf9;
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        .contact-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        .contact-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            line-height: 1.6;
-            font-weight: 300;
+        textarea.form-control {
+            height: 120px;
+            resize: vertical;
         }
 
-        .contact-item strong {
-            font-weight: 600;
-            color: #90caf9;
-        }
-
-        /* Premium Footer */
-        footer {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0d1117 100%);
-            color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 3rem 0;
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--neutral-900);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-weight: 300;
-            letter-spacing: 0.5px;
+            padding: 3rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
         }
 
-        /* Premium Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .slide-in-right {
-            animation: slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Premium scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--primary-gradient);
-            transform-origin: left;
-            transform: scaleX(0);
-            z-index: 9999;
-            transition: transform 0.1s ease;
-        }
-
-        /* ===== PREMIUM MOBILE STYLES ===== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            /* Premium Mobile Navigation */
-            nav {
-                padding: 1.5rem 0;
-            }
-
-            .logo {
-                font-size: 1.6rem;
-            }
-
-            .logo i {
-                font-size: 1.8rem;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 90px;
-                left: -100%;
-                flex-direction: column;
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(25px);
-                width: 100%;
-                padding: 3rem 2rem;
-                transition: var(--transition);
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
-                box-shadow: var(--shadow-medium);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links a {
-                padding: 1rem 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-                font-size: 1.1rem;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            /* Premium Mobile Hero */
-            .hero {
-                padding: 150px 0 100px;
-                min-height: 90vh;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-                margin-bottom: 2.5rem;
-            }
-
-            .cta-button {
-                padding: 18px 32px;
-                font-size: 1rem;
-            }
-
-            /* Premium Mobile Sections */
-            .services, .about, .contact {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 3rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .service-card {
-                padding: 2.5rem 2rem;
-            }
-
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -765,312 +652,546 @@
 
             .about-image {
                 height: 300px;
-                order: -1;
-                font-size: 3.5rem;
+                font-size: 4rem;
             }
 
-            /* Premium Mobile Cost section */
-            .cost-section {
-                padding: 80px 0;
-            }
-
-            .cost-highlight {
-                margin: 2rem 0;
-                padding: 2.5rem 2rem;
-            }
-
-            .price-tag {
-                font-size: 2.5rem;
-            }
-
-            /* Premium Mobile Contact */
-            .contact-info {
+            .contact-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-item {
-                padding: 2.5rem 2rem;
+                gap: 3rem;
             }
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 80px;
+                --container-padding: 20px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100px;
+                left: -100%;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                width: 100%;
+                padding: 2rem;
+                transition: var(--transition);
+                border-top: 1px solid var(--neutral-200);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
-            }
-
             .section-title {
                 font-size: 2rem;
             }
 
-            .cta-button {
-                padding: 16px 28px;
-                font-size: 0.95rem;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
-            .service-card, .contact-item {
-                padding: 2rem 1.5rem;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .cost-highlight {
-                padding: 2rem 1.5rem;
+            .videos-grid {
+                grid-template-columns: 1fr;
             }
+        }
 
-            .price-tag {
+        @media (max-width: 480px) {
+            .hero h1 {
                 font-size: 2rem;
             }
+
+            .service-card,
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ===== SCROLL INDICATOR ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 9999;
+            transition: transform 0.1s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Premium Scroll Indicator -->
-    <div class="scroll-indicator" id="scrollIndicator"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Header -->
-    <header id="header">
+    <header class="header" id="header">
         <nav class="container">
-            <a href="#" class="logo">
-                <i class="fas fa-map-marked-alt"></i>
-                Faiz Survey Consultant
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#services">Perkhidmatan</a></li>
-                <li><a href="#cost">Kos</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#contact">Hubungi</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav">
+                <a href="#" class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <span>Faiz Survey Consultant</span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" class="nav-link active" onclick="showPage('home')" data-page="home">Utama</a></li>
+                    <li><a href="#" class="nav-link" onclick="showPage('videos')" data-page="videos">Videos</a></li>
+                    <li><a href="#" class="nav-link" onclick="showPage('about')" data-page="about">Mengenai Kami</a></li>
+                    <li><a href="#" class="nav-link" onclick="showPage('contact')" data-page="contact">Hubungi Kami</a></li>
+                </ul>
+                
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1>Komited Untuk Membantu Anda</h1>
-                <p>Perkhidmatan ukur tanah profesional untuk segala keperluan pembangunan dan hakmilik tanah</p>
-                <a href="#contact" class="cta-button">
-                    <i class="fas fa-phone"></i>
-                    Hubungi Kami Sekarang
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Perkhidmatan Kami</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
+    <!-- Home Page -->
+    <div class="page-section active" id="home">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-certificate"></i>
+                        Jurukur Tanah Berlesen - Akta 458
                     </div>
-                    <h3>Urusan Hakmilik Tanah</h3>
-                    <p>Membantu menyelesaikan segala urusan yang berkaitan dengan hakmilik tanah dengan profesional dan teliti.</p>
-                </div>
-                
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-map"></i>
-                    </div>
-                    <h3>Pengukuran Topografi</h3>
-                    <p>Melakukan pengukuran topografi dan kejuruteraan bagi apa-apa tujuan pembangunan dengan teknologi terkini.</p>
-                </div>
-                
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Maklumat Tanah</h3>
-                    <p>Membantu individu mengumpul maklumat bagi tanah yang ingin dibeli termasuk lokasi, carian rasmi dan lain-lain.</p>
-                </div>
-                
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3>Pecah Sempadan</h3>
-                    <p>Perkhidmatan pecah sempadan dan pecah bahagian tanah dengan kos yang berpatutan dan proses yang cepat.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cost Section -->
-    <section class="cost-section" id="cost">
-        <div class="container">
-            <div class="cost-content">
-                <h2 class="section-title">Kos Pecah Sempadan & Pecah Bahagian</h2>
-                
-                <div class="cost-highlight">
-                    <h3>Kos Yang Berpatutan</h3>
-                    <p class="price-tag">RM 7,000 - RM 8,000</p>
-                    <p><strong>untuk satu lot banglo sahaja!</strong></p>
-                </div>
-                
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-                    Jangan biarkan kos menjadi penghalang! Harga pasaran tanah hari ini mencecah RM 50,000-70,000 untuk satu lot banglo. 
-                    Dengan pecah sempadan, anda hanya perlu bayar kurang dari RM 10,000 untuk satu lot banglo.
-                </p>
-                
-                <div class="cost-highlight">
-                    <h4>Contoh Pengiraan:</h4>
-                    <p>Kos keseluruhan 1 ekar: RM 40,000</p>
-                    <p>Dibahagi kepada 5-6 pemilik bersama</p>
-                    <p><strong>= RM 7,000-8,000 setiap pemilik</strong></p>
-                </div>
-                
-                <p style="font-size: 1.1rem;">
-                    <em>Setiap kos yang disebut adalah anggaran berdasarkan luas tanah biasa. 
-                    Hubungi kami untuk sebut harga yang tepat.</em>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">Mengapa Pilih Kami?</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Dengan pengalaman bertahun-tahun dalam industri ukur tanah, kami memahami keperluan setiap klien 
-                        dan komited untuk memberikan perkhidmatan terbaik. Kami percaya bahawa setiap masalah tanah 
-                        mempunyai penyelesaian yang berkesan.
+                    <h1>Komited Untuk Membantu Anda</h1>
+                    <p class="hero-subtitle">Perkhidmatan Ukur Tanah Profesional di Terengganu</p>
+                    <p class="hero-description">
+                        Kami menyediakan perkhidmatan ukur tanah yang komprehensif dan profesional untuk membantu menyelesaikan segala urusan berkaitan hakmilik tanah anda.
                     </p>
-                    <br>
-                    <p>
-                        Tim kami terdiri daripada juruukur berlesen dan berpengalaman yang akan memastikan setiap projek 
-                        dijalankan dengan teliti dan mengikut standard yang ditetapkan. Kami juga menyediakan nasihat 
-                        profesional untuk membantu anda membuat keputusan terbaik.
+                    <div class="cta-buttons">
+                        <a href="#" class="btn-primary" onclick="showPage('contact')">
+                            <i class="fas fa-phone"></i>
+                            Hubungi Kami
+                        </a>
+                        <a href="#" class="btn-secondary" onclick="showPage('about')">
+                            <i class="fas fa-user-tie"></i>
+                            Tentang Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Perkhidmatan Kami</h2>
+                    <p class="section-subtitle">Perkhidmatan ukur tanah yang menyeluruh dan profesional untuk semua keperluan anda</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Urusan Hakmilik Tanah</h3>
+                        <p>Menyelesaikan segala urusan yang berkaitan dengan hakmilik tanah secara profesional dan efisien dengan pengalaman bertahun-tahun.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Pengukuran Topografi</h3>
+                        <p>Melakukan pengukuran topografi dan kejuruteraan bagi apa-apa tujuan pembangunan dengan teknologi terkini dan peralatan canggih.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <h3>Maklumat Tanah</h3>
+                        <p>Membantu individu mengumpul maklumat lengkap bagi tanah yang ingin dibeli termasuk lokasi, carian rasmi dan maklumat lain yang diperlukan.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Pecah Sempadan & Bahagian</h3>
+                        <p>Perkhidmatan pecah sempadan dan pecah bahagian tanah dengan kos yang berpatutan dan proses yang cepat serta mengikut undang-undang.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Section -->
+        <section class="cost-section">
+            <div class="container">
+                <div class="cost-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Kos Pecah Sempadan & Pecah Bahagian</h2>
+                        <p class="section-subtitle">Kos yang berpatutan dan telus untuk perkhidmatan profesional</p>
+                    </div>
+                    
+                    <div class="cost-highlight">
+                        <h3>Kos Yang Berpatutan</h3>
+                        <div class="price-tag">RM 7,000 - RM 8,000</div>
+                        <p><strong>untuk satu lot banglo sahaja!</strong></p>
+                        <p style="margin-top: 1rem; color: var(--neutral-600);">
+                            Berbanding harga pasaran tanah yang mencecah RM 50,000-70,000 untuk satu lot banglo
+                        </p>
+                    </div>
+                    
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--neutral-600);">
+                        Jangan biarkan kos menjadi penghalang! Dengan pecah sempadan, anda dapat memiliki tanah dengan kos yang jauh lebih rendah daripada membeli lot individu.
                     </p>
-                    <br>
-                    <p>
-                        <strong>Nilai tambah yang kami berikan:</strong> Kos berpatutan, proses yang cepat, 
-                        nasihat profesional, dan perkhidmatan yang komprehensif dari mula hingga selesai.
+                    
+                    <div class="cost-highlight">
+                        <h4>Contoh Pengiraan Berkongsi Kos:</h4>
+                        <p style="margin-bottom: 1rem;">Kos keseluruhan 1 ekar: <strong>RM 40,000</strong></p>
+                        <p style="margin-bottom: 1rem;">Dibahagi kepada 5-6 pemilik bersama</p>
+                        <p><strong>= RM 7,000-8,000 setiap pemilik</strong></p>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; font-style: italic; color: var(--neutral-600);">
+                        Setiap kos yang disebut adalah anggaran berdasarkan luas tanah biasa. 
+                        Hubungi kami untuk sebut harga yang tepat dan terperinci.
                     </p>
                 </div>
-                <div class="about-image">
-                    <i class="fas fa-award"></i>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Hubungi Kami</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Telefon</h3>
-                    <p>Hubungi kami untuk konsultasi percuma</p>
-                    <p><strong>+60X-XXX XXXX</strong></p>
+    <!-- Videos Page -->
+    <div class="page-section" id="videos">
+        <section class="videos">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Video Edukasi & Perkhidmatan</h2>
+                    <p class="section-subtitle">Tonton video-video informatif tentang perkhidmatan kami dan tips berkaitan hartanah</p>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-content">
+                            <h4>Media FSC</h4>
+                            <p>Pengenalan kepada Faiz Survey Consultant dan perkhidmatan yang ditawarkan.</p>
+                        </div>
                     </div>
-                    <h3>Email</h3>
-                    <p>Hantar pertanyaan melalui email</p>
-                    <p><strong>info@fsconsult.com.my</strong></p>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-content">
+                            <h4>Perkhidmatan FSC</h4>
+                            <p>Penjelasan terperinci tentang semua perkhidmatan ukur tanah yang kami sediakan.</p>
+                        </div>
                     </div>
-                    <h3>Lokasi</h3>
-                    <p>Melayan seluruh Malaysia</p>
-                    <p><strong>Perkhidmatan ke seluruh negara</strong></p>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-content">
+                            <h4>4 Tips Untuk Membeli Hartanah</h4>
+                            <p>Panduan penting yang perlu diketahui sebelum membeli hartanah untuk mengelakkan masalah.</p>
+                        </div>
                     </div>
-                    <h3>Waktu Operasi</h3>
-                    <p>Senin - Jumaat: 8:00 - 17:00</p>
-                    <p><strong>Sabtu: 8:00 - 12:00</strong></p>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-content">
+                            <h4>Risiko Membeli Lot Lidi</h4>
+                            <p>Penerangan tentang risiko dan hal yang perlu diberi perhatian ketika membeli lot lidi.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div class="page-section" id="about">
+        <section class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mengenai Kami</h2>
+                    <p class="section-subtitle">Profesional dan berpengalaman dalam bidang ukur tanah</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="about-text">
+                        <h3>Sr. Wan Mohd Faiz Bin Wan Abd Rahman</h3>
+                        <p class="professional-title">Jurukur Tanah Berlesen di bawah Akta 458</p>
+                        
+                        <p>
+                            Firma FSC ini telah ditubuhkan pada <strong>1 Januari 2018</strong> dan diterajui oleh Sr. Wan Mohd Faiz bin Wan Abd Rahman. Misi beliau adalah untuk membantu masyarakat tempatan terutama di seluruh negeri Terengganu untuk menyelesaikan sebarang masalah yang melibatkan tanah mereka.
+                        </p>
+                        
+                        <p>
+                            Beliau juga ingin memberikan kesedaran dan ilmu kepada masyarakat berkenaan sebarang urusan tanah yang berlaku di antara pemilik tanah dan pihak berkuasa, sama ada Pihak Berkuasa Negeri atau pihak Pejabat Tanah dan Daerah.
+                        </p>
+                        
+                        <p>
+                            Dengan pengalaman bertahun-tahun dalam industri ukur tanah, kami komited untuk memberikan perkhidmatan yang terbaik dengan integriti dan profesionalisme yang tinggi.
+                        </p>
+                        
+                        <div style="margin-top: 2rem;">
+                            <strong>Pengalaman & Kepakaran:</strong>
+                            <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--neutral-600);">
+                                <li>Jurukur Tanah Berlesen</li>
+                                <li>Pengalaman dalam pecah sempadan dan bahagian</li>
+                                <li>Pakar dalam pengukuran topografi</li>
+                                <li>Nasihat urusan hakmilik tanah</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page-section" id="contact">
+        <section class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" style="color: white;">Hubungi Kami</h2>
+                    <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Sedia membantu anda dengan sebarang pertanyaan atau keperluan perkhidmatan</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Maklumat Hubungan</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon Pejabat</h4>
+                                <p>+609 653 2168</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+60133466002</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>fsc01@faizsurveyconsultant.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Facebook</h4>
+                                <p>FSC@FACEBOOK.COM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Kawasan Perkhidmatan</h4>
+                                <p>Seluruh Negeri Terengganu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Hantar Pertanyaan</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nama Penuh</label>
+                                <input type="text" id="name" class="form-control" placeholder="Masukkan nama anda" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Masukkan email anda" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="Masukkan nombor telefon" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <select id="subject" class="form-control" required>
+                                    <option value="">Pilih jenis perkhidmatan</option>
+                                    <option value="pecah-sempadan">Pecah Sempadan</option>
+                                    <option value="topografi">Pengukuran Topografi</option>
+                                    <option value="hakmilik">Urusan Hakmilik</option>
+                                    <option value="maklumat">Maklumat Tanah</option>
+                                    <option value="lain">Lain-lain</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mesej</label>
+                                <textarea id="message" class="form-control" placeholder="Terangkan keperluan anda..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i>
+                                Hantar Mesej
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Faiz Survey Consultant. Hak cipta terpelihara. | Designed with ❤️ for better service</p>
+            <p>&copy; 2025 Faiz Survey Consultant. Hak cipta terpelihara. | Jurukur Tanah Berlesen Terengganu</p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // ===== MAIN DESKTOP/MOBILE JAVASCRIPT ===== //
-        
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        const header = document.getElementById('header');
+        // Navigation and Page Management
+        let currentPage = 'home';
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Close mobile menu when clicking on nav links
-        navLinks.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            }
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
             });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.querySelector(`[data-page="${pageId}"]`).classList.add('active');
+            
+            // Close mobile menu if open
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.remove('active');
+            
+            // Update mobile toggle icon
+            const mobileToggle = document.getElementById('mobileToggle');
+            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            currentPage = pageId;
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            const isActive = navMenu.classList.contains('active');
+            
+            navMenu.classList.toggle('active');
+            
+            // Update icon
+            this.innerHTML = isActive ? 
+                '<i class="fas fa-bars"></i>' : 
+                '<i class="fas fa-times"></i>';
+        });
+
+        // Header Scroll Effect
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateScrollEffects() {
+            const scrollY = window.scrollY;
+            const header = document.getElementById('header');
+            const scrollProgress = document.getElementById('scrollProgress');
+            
+            // Header background
+            if (scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Scroll progress
+            const scrollPercent = (scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.transform = `scaleX(${Math.min(scrollPercent / 100, 1)})`;
+            
+            // Header hide/show
+            if (scrollY > lastScrollY && scrollY > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollY = scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
         });
 
         // Intersection Observer for animations
@@ -1080,33 +1201,89 @@
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    setTimeout(() => {
+                        entry.target.classList.add('fade-in');
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
                 }
             });
         }, observerOptions);
 
-        // Observe all animated elements
-        document.querySelectorAll('.service-card, .fade-in-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.8s ease-out';
-            observer.observe(el);
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.service-card, .video-card, .cost-highlight, .contact-item');
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(el);
+            });
         });
 
-        // Add loading animation
+        // Form Handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.phone || !data.message) {
+                alert('Sila lengkapkan semua maklumat yang diperlukan.');
+                return;
+            }
+            
+            // Show success message
+            alert('Terima kasih! Mesej anda telah dihantar. Kami akan menghubungi anda tidak lama lagi.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Video Card Click Handler
+        document.querySelectorAll('.video-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('h4').textContent;
+                alert(`Video "${title}" akan dibuka. Dalam implementasi sebenar, ini akan membuka pemain video.`);
+            });
+        });
+
+        // Smooth Loading Animation
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
             document.body.style.transition = 'opacity 0.5s ease-in';
+            
+            // Animate hero content
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.animation = 'fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
+            }
         });
 
         // Initialize page
         document.body.style.opacity = '0';
 
-        // Add dynamic hover effects for service cards
-        document.querySelectorAll('.service-card').forEach(card => {
+        // Contact item click handlers for mobile
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const text = this.querySelector('.contact-details p').textContent;
+                const type = this.querySelector('.contact-details h4').textContent;
+                
+                if (type.includes('Telefon') || type.includes('WhatsApp')) {
+                    window.location.href = `tel:${text.replace(/\s/g, '')}`;
+                } else if (type.includes('Email')) {
+                    window.location.href = `mailto:${text}`;
+                }
+            });
+        });
+
+        // Enhanced hover effects for premium feel
+        document.querySelectorAll('.service-card, .video-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
             });
@@ -1116,65 +1293,15 @@
             });
         });
 
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        // Accessibility improvements
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
             }
         });
 
-        // Form validation (if contact form is added later)
-        function validateForm(form) {
-            const inputs = form.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.style.borderColor = '#ff6b6b';
-                } else {
-                    input.style.borderColor = '#ddd';
-                }
-            });
-            
-            return isValid;
-        }
-
-        // Add dynamic pricing calculator (optional feature)
-        function calculateCost(landSize, numberOfOwners) {
-            const baseCost = 40000; // Base cost for 1 acre
-            const costPerOwner = baseCost / numberOfOwners;
-            return {
-                total: baseCost,
-                perOwner: Math.round(costPerOwner)
-            };
-        }
-
-        // Performance optimization: Lazy load images (when images are added)
-        function lazyLoadImages() {
-            const images = document.querySelectorAll('img[data-src]');
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            images.forEach(img => imageObserver.observe(img));
-        }
-
-        // Initialize lazy loading when DOM is loaded
-        document.addEventListener('DOMContentLoaded', lazyLoadImages);
-
-        // Add error handling for failed resources
-        window.addEventListener('error', (e) => {
-            console.warn('Resource failed to load:', e.target.src || e.target.href);
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
         });
     </script>
 </body>
