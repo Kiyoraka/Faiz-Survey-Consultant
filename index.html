@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faiz Survey Consultant - Perkhidmatan Ukur Tanah Profesional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            background: #fafbfc;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* ===== PREMIUM DESIGN VARIABLES ===== */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-medium: 0 15px 35px rgba(31, 38, 135, 0.2);
+            --shadow-heavy: 0 25px 50px rgba(31, 38, 135, 0.15);
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b7280;
+            --border-radius: 20px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== PREMIUM DESKTOP STYLES ===== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Premium Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-primary);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+        }
+
+        .logo i {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.2rem;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: -0.02em;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Premium Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="grain" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0.05)"/></radialGradient></defs><rect width="100" height="20" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            letter-spacing: -0.01em;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-heavy);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Premium Services Section */
+        .services {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-heavy);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Premium Cost Section */
+        .cost-section {
+            padding: 120px 0;
+            background: var(--primary-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cost-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="premium-grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23premium-grid)"/></svg>');
+        }
+
+        .cost-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cost-section .section-title {
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .cost-section .section-title::after {
+            background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+        }
+
+        .cost-highlight {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin: 3rem 0;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+        }
+
+        .cost-highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .cost-highlight h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .cost-highlight h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .price-tag {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+            margin: 1rem 0;
+            letter-spacing: -0.02em;
+        }
+
+        .cost-section p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Premium About Section */
+        .about {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+            position: relative;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .about-text p {
+            margin-bottom: 2rem;
+        }
+
+        .about-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .about-image {
+            background: var(--primary-gradient);
+            border-radius: var(--border-radius);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="about-pattern" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.2)"/><stop offset="100%" stop-color="rgba(255,255,255,0.05)"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23about-pattern)"/><circle cx="80" cy="80" r="2" fill="url(%23about-pattern)"/><circle cx="20" cy="80" r="2" fill="url(%23about-pattern)"/><circle cx="80" cy="20" r="2" fill="url(%23about-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .about-image i {
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Premium Contact Section */
+        .contact {
+            padding: 120px 0;
+            background: var(--dark-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23contact-dots)"/></svg>');
+        }
+
+        .contact .section-title {
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact .section-title::after {
+            background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-item {
+            padding: 3rem 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #64b5f6;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.1);
+            color: #90caf9;
+        }
+
+        .contact-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .contact-item strong {
+            font-weight: 600;
+            color: #90caf9;
+        }
+
+        /* Premium Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d1117 100%);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Premium Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-right {
+            animation: slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Premium scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        /* ===== PREMIUM MOBILE STYLES ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            /* Premium Mobile Navigation */
+            nav {
+                padding: 1.5rem 0;
+            }
+
+            .logo {
+                font-size: 1.6rem;
+            }
+
+            .logo i {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(25px);
+                width: 100%;
+                padding: 3rem 2rem;
+                transition: var(--transition);
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                box-shadow: var(--shadow-medium);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                font-size: 1.1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            /* Premium Mobile Hero */
+            .hero {
+                padding: 150px 0 100px;
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .cta-button {
+                padding: 18px 32px;
+                font-size: 1rem;
+            }
+
+            /* Premium Mobile Sections */
+            .services, .about, .contact {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card {
+                padding: 2.5rem 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                height: 300px;
+                order: -1;
+                font-size: 3.5rem;
+            }
+
+            /* Premium Mobile Cost section */
+            .cost-section {
+                padding: 80px 0;
+            }
+
+            .cost-highlight {
+                margin: 2rem 0;
+                padding: 2.5rem 2rem;
+            }
+
+            .price-tag {
+                font-size: 2.5rem;
+            }
+
+            /* Premium Mobile Contact */
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-item {
+                padding: 2.5rem 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 16px 28px;
+                font-size: 0.95rem;
+            }
+
+            .service-card, .contact-item {
+                padding: 2rem 1.5rem;
+            }
+
+            .cost-highlight {
+                padding: 2rem 1.5rem;
+            }
+
+            .price-tag {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-map-marked-alt"></i>
+                Faiz Survey Consultant
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#services">Perkhidmatan</a></li>
+                <li><a href="#cost">Kos</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Hubungi</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>Komited Untuk Membantu Anda</h1>
+                <p>Perkhidmatan ukur tanah profesional untuk segala keperluan pembangunan dan hakmilik tanah</p>
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-phone"></i>
+                    Hubungi Kami Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Perkhidmatan Kami</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Urusan Hakmilik Tanah</h3>
+                    <p>Membantu menyelesaikan segala urusan yang berkaitan dengan hakmilik tanah dengan profesional dan teliti.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Pengukuran Topografi</h3>
+                    <p>Melakukan pengukuran topografi dan kejuruteraan bagi apa-apa tujuan pembangunan dengan teknologi terkini.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Maklumat Tanah</h3>
+                    <p>Membantu individu mengumpul maklumat bagi tanah yang ingin dibeli termasuk lokasi, carian rasmi dan lain-lain.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Pecah Sempadan</h3>
+                    <p>Perkhidmatan pecah sempadan dan pecah bahagian tanah dengan kos yang berpatutan dan proses yang cepat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Section -->
+    <section class="cost-section" id="cost">
+        <div class="container">
+            <div class="cost-content">
+                <h2 class="section-title">Kos Pecah Sempadan & Pecah Bahagian</h2>
+                
+                <div class="cost-highlight">
+                    <h3>Kos Yang Berpatutan</h3>
+                    <p class="price-tag">RM 7,000 - RM 8,000</p>
+                    <p><strong>untuk satu lot banglo sahaja!</strong></p>
+                </div>
+                
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    Jangan biarkan kos menjadi penghalang! Harga pasaran tanah hari ini mencecah RM 50,000-70,000 untuk satu lot banglo. 
+                    Dengan pecah sempadan, anda hanya perlu bayar kurang dari RM 10,000 untuk satu lot banglo.
+                </p>
+                
+                <div class="cost-highlight">
+                    <h4>Contoh Pengiraan:</h4>
+                    <p>Kos keseluruhan 1 ekar: RM 40,000</p>
+                    <p>Dibahagi kepada 5-6 pemilik bersama</p>
+                    <p><strong>= RM 7,000-8,000 setiap pemilik</strong></p>
+                </div>
+                
+                <p style="font-size: 1.1rem;">
+                    <em>Setiap kos yang disebut adalah anggaran berdasarkan luas tanah biasa. 
+                    Hubungi kami untuk sebut harga yang tepat.</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Mengapa Pilih Kami?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Dengan pengalaman bertahun-tahun dalam industri ukur tanah, kami memahami keperluan setiap klien 
+                        dan komited untuk memberikan perkhidmatan terbaik. Kami percaya bahawa setiap masalah tanah 
+                        mempunyai penyelesaian yang berkesan.
+                    </p>
+                    <br>
+                    <p>
+                        Tim kami terdiri daripada juruukur berlesen dan berpengalaman yang akan memastikan setiap projek 
+                        dijalankan dengan teliti dan mengikut standard yang ditetapkan. Kami juga menyediakan nasihat 
+                        profesional untuk membantu anda membuat keputusan terbaik.
+                    </p>
+                    <br>
+                    <p>
+                        <strong>Nilai tambah yang kami berikan:</strong> Kos berpatutan, proses yang cepat, 
+                        nasihat profesional, dan perkhidmatan yang komprehensif dari mula hingga selesai.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-award"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telefon</h3>
+                    <p>Hubungi kami untuk konsultasi percuma</p>
+                    <p><strong>+60X-XXX XXXX</strong></p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Hantar pertanyaan melalui email</p>
+                    <p><strong>info@fsconsult.com.my</strong></p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Lokasi</h3>
+                    <p>Melayan seluruh Malaysia</p>
+                    <p><strong>Perkhidmatan ke seluruh negara</strong></p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Waktu Operasi</h3>
+                    <p>Senin - Jumaat: 8:00 - 17:00</p>
+                    <p><strong>Sabtu: 8:00 - 12:00</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Faiz Survey Consultant. Hak cipta terpelihara. | Designed with ❤️ for better service</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== MAIN DESKTOP/MOBILE JAVASCRIPT ===== //
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const header = document.getElementById('header');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking on nav links
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.service-card, .fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+            document.body.style.transition = 'opacity 0.5s ease-in';
+        });
+
+        // Initialize page
+        document.body.style.opacity = '0';
+
+        // Add dynamic hover effects for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Form validation (if contact form is added later)
+        function validateForm(form) {
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#ff6b6b';
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+            
+            return isValid;
+        }
+
+        // Add dynamic pricing calculator (optional feature)
+        function calculateCost(landSize, numberOfOwners) {
+            const baseCost = 40000; // Base cost for 1 acre
+            const costPerOwner = baseCost / numberOfOwners;
+            return {
+                total: baseCost,
+                perOwner: Math.round(costPerOwner)
+            };
+        }
+
+        // Performance optimization: Lazy load images (when images are added)
+        function lazyLoadImages() {
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        }
+
+        // Initialize lazy loading when DOM is loaded
+        document.addEventListener('DOMContentLoaded', lazyLoadImages);
+
+        // Add error handling for failed resources
+        window.addEventListener('error', (e) => {
+            console.warn('Resource failed to load:', e.target.src || e.target.href);
+        });
+    </script>
+</body>
+</html>
